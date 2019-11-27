@@ -26,14 +26,3 @@ C:\Users\Num\Desktop\LTDT\LTDT\LTDT\obj\Debug\LTDT.csproj.GenerateResource.cache
 C:\Users\Num\Desktop\LTDT\LTDT\LTDT\obj\Debug\LTDT.exe
 C:\Users\Num\Desktop\LTDT\LTDT\LTDT\obj\Debug\LTDT.pdb
 C:\Users\Num\Desktop\LTDT\LTDT\LTDT\obj\Debug\LTDT.Node.resources
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\bin\Debug\LTDT.exe.config
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\bin\Debug\LTDT.exe
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\bin\Debug\LTDT.pdb
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.csprojAssemblyReference.cache
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.fMain.resources
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.Node.resources
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.Properties.Resources.resources
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.csproj.GenerateResource.cache
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.csproj.CoreCompileInputs.cache
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.exe
-C:\Users\thait\Documents\GitHub\LTDT\LTDT\obj\Debug\LTDT.pdb

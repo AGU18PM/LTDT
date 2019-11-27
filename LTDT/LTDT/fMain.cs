@@ -69,9 +69,9 @@ namespace LTDT
                 theRoad.MinCost[Convert.ToInt32(cboA.Text) - 1, Convert.ToInt32(cboB.Text) - 1] = Convert.ToInt32(txbTS.Text);
                 count--;
             }
-            else
+            if(count==0)
             {
-                MessageBox.Show("Xong");
+                button2.Enabled = false;
             }
             Point a = new Point(theRoad.X[Convert.ToInt32(cboA.Text) - 1], theRoad.Y[Convert.ToInt32(cboA.Text) - 1]);
             Point b = new Point(theRoad.X[Convert.ToInt32(cboB.Text) - 1], theRoad.Y[Convert.ToInt32(cboB.Text) - 1]);
@@ -184,14 +184,22 @@ namespace LTDT
                 {
                     dodai += theRoad.Map[theRoad.Road[i], theRoad.Road[i + 1]];
                 }
-                reSulr = "Do dai: " + dodai.ToString();
+                reSulr = "Độ dài: " + dodai.ToString();
                 reSulr += "\n";
-                reSulr += "So tien: " + sotien.ToString();
-                MessageBox.Show(reSulr);
+                reSulr += "Chi phí: " + sotien.ToString();
+                reSulr += "\n";
+                string a = "Đoạn đường đi từ "+(theRoad.StartPoint+1)+"->"+(theRoad.Ends+1)+": ";
+                for (int i = 0; i < theRoad.RoadsCount-1; i++)
+                {
+                    a += (theRoad.Road[i] + 1).ToString() +"-->";
+                }
+                a += (theRoad.Ends+1);
+                MessageBox.Show(reSulr+=a);
             }
             else
             {
-                MessageBox.Show("Không có đường đi phù hợp");
+                reSulr = "Không tìm được!!!";
+                MessageBox.Show(reSulr);
             }
 
 
@@ -276,6 +284,21 @@ namespace LTDT
         private void btnClear_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.DefaultExt = "Csharp |*.cs";
+            save.Filter = "txt file (.txt)|*.txt|CSharp(.cs)|*.cs|C++(.cpp)|*.cpp|All file(*.*)|*.*";
+            save.Title = "Save a file......";
+            DialogResult kq = save.ShowDialog();
+            if (kq == DialogResult.OK)
+            {
+                StreamWriter file = new StreamWriter(save.FileName);
+                file.Write(reSulr);
+                file.Close();
+            }
         }
     }
 }

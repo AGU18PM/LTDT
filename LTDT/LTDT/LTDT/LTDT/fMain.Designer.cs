@@ -33,9 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nUDRoadAmount = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnReadFile = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txbDoDai = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbTS = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -52,8 +49,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pBDT = new System.Windows.Forms.PictureBox();
             this.btnResult = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSaveFile = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbDoDai = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCityAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDRoadAmount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -94,8 +91,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSaveFile);
-            this.groupBox1.Controls.Add(this.btnReadFile);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txbDoDai);
             this.groupBox1.Controls.Add(this.label7);
@@ -121,32 +116,6 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
-            // 
-            // btnReadFile
-            // 
-            this.btnReadFile.Location = new System.Drawing.Point(113, 212);
-            this.btnReadFile.Name = "btnReadFile";
-            this.btnReadFile.Size = new System.Drawing.Size(83, 36);
-            this.btnReadFile.TabIndex = 18;
-            this.btnReadFile.Text = "ReadFile";
-            this.btnReadFile.UseVisualStyleBackColor = true;
-            this.btnReadFile.Click += new System.EventHandler(this.btnReadFile_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 332);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Độ dài";
-            // 
-            // txbDoDai
-            // 
-            this.txbDoDai.Location = new System.Drawing.Point(104, 325);
-            this.txbDoDai.Name = "txbDoDai";
-            this.txbDoDai.Size = new System.Drawing.Size(120, 20);
-            this.txbDoDai.TabIndex = 16;
             // 
             // label7
             // 
@@ -286,32 +255,27 @@
             this.btnResult.UseVisualStyleBackColor = true;
             this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
-            // btnClear
+            // label8
             // 
-            this.btnClear.Location = new System.Drawing.Point(181, 434);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 43);
-            this.btnClear.TabIndex = 19;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 332);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Độ dài";
             // 
-            // btnSaveFile
+            // txbDoDai
             // 
-            this.btnSaveFile.Location = new System.Drawing.Point(113, 372);
-            this.btnSaveFile.Name = "btnSaveFile";
-            this.btnSaveFile.Size = new System.Drawing.Size(83, 36);
-            this.btnSaveFile.TabIndex = 19;
-            this.btnSaveFile.Text = "Xuất file";
-            this.btnSaveFile.UseVisualStyleBackColor = true;
-            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            this.txbDoDai.Location = new System.Drawing.Point(104, 325);
+            this.txbDoDai.Name = "txbDoDai";
+            this.txbDoDai.Size = new System.Drawing.Size(120, 20);
+            this.txbDoDai.TabIndex = 16;
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 489);
-            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnResult);
             this.Controls.Add(this.pBDT);
             this.Controls.Add(this.button3);
@@ -353,9 +317,6 @@
         private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbDoDai;
-        private System.Windows.Forms.Button btnReadFile;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnSaveFile;
     }
 }
 
