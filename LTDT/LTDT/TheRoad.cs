@@ -141,8 +141,7 @@ namespace LTDT
                 for (int i = 0; i < citysAmount; i++)
                 {
                     for (int j = 0; j < citysAmount; j++)
-                    {
-                        //      MessageBox.Show("i = " + i + " j =" + j + " k = " + k + " MinRoad[i, j] =" + MinRoad[i, j] + " MinRoad[k, j]=" + MinRoad[k, j] + " MinRoad[i, k]=" + MinRoad[i, k]);
+                    {                        
                         if (MinRoad[i, j] > MinRoad[k, j] + MinRoad[i, k] && i != j && MinRoad[k, j] != int.MaxValue && MinRoad[i, k] != int.MaxValue)
                         {
                             MinRoad[i, j] = MinRoad[k, j] + MinRoad[i, k];

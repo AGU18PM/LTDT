@@ -35,7 +35,8 @@ namespace LTDT
             if (isFirst == 1)
             {
                 isFirst = 0;
-                theRoad = new TheRoad(Convert.ToInt32(txbStartPoint.Text) - 1, Convert.ToInt32(txbEnds.Text) - 1, Convert.ToInt32(txbCash.Text), Convert.ToInt32(nUDCityAmount.Value), Convert.ToInt32(nUDRoadAmount.Value));
+                theRoad = new TheRoad(Convert.ToInt32(txbStartPoint.Text) - 1, Convert.ToInt32(txbEnds.Text) - 1, 
+                    Convert.ToInt32(txbCash.Text), Convert.ToInt32(nUDCityAmount.Value), Convert.ToInt32(nUDRoadAmount.Value));
                 count = theRoad.RoadsAmount;
                 addToComboBox();
                 theRoad.createPosition();
@@ -96,16 +97,7 @@ namespace LTDT
             location1.Y = theRoad.Y[i];
             n.Location = location1;
             n.BackColor = Color.Green;
-
-            //Node m = new Node(j);
-            //Point location2 = new Point(0, 0);
-            //location1.X = theRoad.X[j];
-            //location1.Y = theRoad.Y[j];
-            //m.Location = location2;
-            //m.BackColor = Color.Green;
-            pBDT.Controls.Add(n);
-            //pBDT.Controls.Add(m);
-            //DrawALine(n.Location, m.Location);
+            pBDT.Controls.Add(n);            
         }
 
         private void DrawALine(Point a, Point b, int i, int j, int isResult)
@@ -144,6 +136,15 @@ namespace LTDT
 
         private void button3_Click(object sender, EventArgs e)
         {
+            PictureBox PositionIcon = new PictureBox();
+            Size s = new Size(20, 20);
+            PositionIcon.Size = s;
+            PositionIcon.BackgroundImage = Image.FromFile(@"C:\Users\thait\Documents\GitHub\LTDT\IMG\icon-gps-2.jpg");
+            PositionIcon.BackgroundImageLayout = ImageLayout.Stretch;
+            pBDT.Controls.Add(PositionIcon);
+            Point loc = new Point(theRoad.X[theRoad.Ends] + 2, theRoad.Y[theRoad.Ends] - 20);
+            PositionIcon.Location = loc;
+            
             theRoad.findTheMinCost();
             theRoad.findTheMinRoad();
             theRoad.result();
@@ -298,6 +299,25 @@ namespace LTDT
                 StreamWriter file = new StreamWriter(save.FileName);
                 file.Write(reSulr);
                 file.Close();
+            }
+            
+        }
+
+        private void btnSaveImg_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = new Bitmap(pBDT.Width, pBDT.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            Graphics anh = Graphics.FromImage(bmp);
+
+            anh.CopyFromScreen(PointToScreen(pBDT.Location).X, PointToScreen(pBDT.Location).Y, 0, 0, pBDT.Size, CopyPixelOperation.SourceCopy);
+
+            SaveFileDialog save = new SaveFileDialog();
+            save.DefaultExt = "Csharp |*.cs";
+            save.Filter = "JPEG|*.jpg";
+            save.Title = "Save a file......";
+            DialogResult kq = save.ShowDialog();
+            if (kq == DialogResult.OK)
+            {
+                bmp.Save(save.FileName);
             }
         }
     }

@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nUDRoadAmount = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSaveFile = new System.Windows.Forms.Button();
             this.btnReadFile = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txbDoDai = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@
             this.pBDT = new System.Windows.Forms.PictureBox();
             this.btnResult = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnSaveFile = new System.Windows.Forms.Button();
+            this.btnSaveImg = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCityAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDRoadAmount)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -94,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSaveImg);
             this.groupBox1.Controls.Add(this.btnSaveFile);
             this.groupBox1.Controls.Add(this.btnReadFile);
             this.groupBox1.Controls.Add(this.label8);
@@ -122,13 +124,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input";
             // 
+            // btnSaveFile
+            // 
+            this.btnSaveFile.Location = new System.Drawing.Point(87, 372);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(69, 36);
+            this.btnSaveFile.TabIndex = 19;
+            this.btnSaveFile.Text = "Xuất file";
+            this.btnSaveFile.UseVisualStyleBackColor = true;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            // 
             // btnReadFile
             // 
             this.btnReadFile.Location = new System.Drawing.Point(113, 212);
             this.btnReadFile.Name = "btnReadFile";
             this.btnReadFile.Size = new System.Drawing.Size(83, 36);
             this.btnReadFile.TabIndex = 18;
-            this.btnReadFile.Text = "ReadFile";
+            this.btnReadFile.Text = "Đọc file";
             this.btnReadFile.UseVisualStyleBackColor = true;
             this.btnReadFile.Click += new System.EventHandler(this.btnReadFile_Click);
             // 
@@ -168,7 +180,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(9, 372);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 36);
+            this.button2.Size = new System.Drawing.Size(68, 36);
             this.button2.TabIndex = 13;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
@@ -187,9 +199,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(98, 259);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 13);
+            this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 11;
-            this.label6.Text = "--->";
+            this.label6.Text = "đến";
             // 
             // cboA
             // 
@@ -205,7 +217,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 36);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Xong";
+            this.button1.Text = "Khởi tạo";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -263,7 +275,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 44);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Load";
+            this.button3.Text = "Thực hiện";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -278,11 +290,11 @@
             // 
             // btnResult
             // 
-            this.btnResult.Location = new System.Drawing.Point(101, 434);
+            this.btnResult.Location = new System.Drawing.Point(91, 434);
             this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(72, 43);
+            this.btnResult.Size = new System.Drawing.Size(73, 43);
             this.btnResult.TabIndex = 7;
-            this.btnResult.Text = "Ket qua";
+            this.btnResult.Text = "Kết quả";
             this.btnResult.UseVisualStyleBackColor = true;
             this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
@@ -292,19 +304,19 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 43);
             this.btnClear.TabIndex = 19;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Làm mới";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnSaveFile
+            // btnSaveImg
             // 
-            this.btnSaveFile.Location = new System.Drawing.Point(113, 372);
-            this.btnSaveFile.Name = "btnSaveFile";
-            this.btnSaveFile.Size = new System.Drawing.Size(83, 36);
-            this.btnSaveFile.TabIndex = 19;
-            this.btnSaveFile.Text = "Xuất file";
-            this.btnSaveFile.UseVisualStyleBackColor = true;
-            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            this.btnSaveImg.Location = new System.Drawing.Point(168, 372);
+            this.btnSaveImg.Name = "btnSaveImg";
+            this.btnSaveImg.Size = new System.Drawing.Size(69, 36);
+            this.btnSaveImg.TabIndex = 20;
+            this.btnSaveImg.Text = "Xuất ảnh";
+            this.btnSaveImg.UseVisualStyleBackColor = true;
+            this.btnSaveImg.Click += new System.EventHandler(this.btnSaveImg_Click);
             // 
             // fMain
             // 
@@ -318,7 +330,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "fMain";
-            this.Text = "Form1";
+            this.Text = "Tìm đường giữa các thành phố";
             ((System.ComponentModel.ISupportInitialize)(this.nUDCityAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDRoadAmount)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -356,6 +368,7 @@
         private System.Windows.Forms.Button btnReadFile;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSaveFile;
+        private System.Windows.Forms.Button btnSaveImg;
     }
 }
 
